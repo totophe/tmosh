@@ -1,0 +1,22 @@
+[package]
+name = "tmosh"
+version = "0.1.0"
+edition = "2021"
+description = "Interactive tmux session picker that runs on SSH/mosh login"
+license = "MIT"
+repository = "https://github.com/totophe/tmosh"
+readme = "README.md"
+
+[[bin]]
+name = "tmosh"
+path = "src/main.rs"
+
+[dependencies]
+crossterm = "0.28"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"
