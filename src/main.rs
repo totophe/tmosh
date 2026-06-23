@@ -65,7 +65,12 @@ fn run() -> ExitCode {
         return ExitCode::SUCCESS;
     }
 
-    let sessions = tmux::list_sessions();
+    // Only offer detached sessions as attach candidates — a session already
+    // attached elsewhere shouldn't be in the list.
+    let sessions: Vec<_> = tmux::list_sessions()
+        .into_iter()
+        .filter(|s| !s.attached)
+        .collect();
 
     let choice = match menu::run(&sessions, VERSION) {
         Ok(c) => c,

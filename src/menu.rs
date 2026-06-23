@@ -147,9 +147,8 @@ fn draw(
         match item {
             Item::Session(i) => {
                 let s = &sessions[*i];
-                let status = if s.attached { "attached" } else { "detached" };
                 let label = format!(
-                    "  {pointer} {name}  ({status}, {win}w, {act})\r\n",
+                    "  {pointer} {name}  ({win}w, {act})\r\n",
                     name = s.name,
                     win = s.windows,
                     act = s.activity,
