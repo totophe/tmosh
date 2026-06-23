@@ -87,7 +87,7 @@ cargo build --release
 - **CI** (`.github/workflows/ci.yml`) runs fmt, clippy (`-D warnings`), tests,
   and a release build on every push/PR.
 - **Release** (`.github/workflows/release.yml`) triggers on a `v*` tag. It
-  cross-builds for Linux (x86_64, aarch64) and macOS (x86_64, aarch64), uploads
+  cross-builds for Linux (x86_64, aarch64) and macOS (aarch64), uploads
   each as a **GitHub build artifact**, and publishes them — plus a `SHA256SUMS`
   file — as assets on the **GitHub Release** that the installer and self-updater
   download from.
