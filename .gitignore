@@ -1,2 +1,15 @@
+# Rust build artifacts
 /target
 **/*.rs.bk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editors / IDEs
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
