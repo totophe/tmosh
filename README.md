@@ -1,5 +1,9 @@
 # tmosh
 
+[![CI](https://github.com/totophe/tmosh/actions/workflows/ci.yml/badge.svg)](https://github.com/totophe/tmosh/actions/workflows/ci.yml)
+[![Release](https://github.com/totophe/tmosh/actions/workflows/release.yml/badge.svg)](https://github.com/totophe/tmosh/actions/workflows/release.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 A tiny Rust tool that greets you on every SSH/[mosh](https://mosh.org/) login and
 asks what you want to do:
 
@@ -7,16 +11,7 @@ asks what you want to do:
 - **create** a new tmux session, or
 - **drop to the shell** — press <kbd>Esc</kbd> any time as the escape hatch.
 
-```
-  tmosh v0.1.0
-
-  › work     (attached, 3w, 2h ago)
-    scratch  (detached, 1w, 2m ago)
-    + new session
-    shell (no tmux)
-
-  ↑/↓ move · enter select · esc → shell
-```
+![tmosh in action](docs/demo.gif)
 
 It is a single static-ish binary, has no runtime config, and updates itself
 omz-style from GitHub Releases.
