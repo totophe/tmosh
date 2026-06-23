@@ -97,7 +97,9 @@ cargo build --release
   file — as assets on the **GitHub Release** that the installer and self-updater
   download from.
 
-To cut a release:
+To cut a release, bump `version` in `Cargo.toml` and push a matching tag — the
+workflow verifies they agree before building. See [RELEASING.md](RELEASING.md)
+for the full checklist.
 
 ```sh
 git tag v0.1.0
